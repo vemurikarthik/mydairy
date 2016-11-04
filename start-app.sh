@@ -23,21 +23,7 @@ do
 	if [ "$valid_env" = "$1" ]; then
 		$validated = "true"
 		echo Starting app
-		mkdir -p ~/logs
-		cd logs
-		file="EventPages.log"
-		if [ ! -e "$file" ] ; then
-			touch "$file"
-		fi
-
-		if [ ! -w "$file" ] ; then
-			echo cannot write to $file
-			exit 1
-		fi
-
-		cd ..
-
-		nohup meteor --production --port $PORT >>./logs/EventPages.log 2>&1 &
+		nohup meteor --production --port $PORT >> naadairy.log 2>&1 &
 		echo "Started app in $ENV mode"
 
 		echo "Press Enter to return to terminal"
