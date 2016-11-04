@@ -1,0 +1,91 @@
+<template name='landingPage'>
+	<!-- {{>navigationBar}} -->
+	<h2 class="appDescription text-center">Welcome to the best eco-friendly online diary</h2>
+	<h4 class="appDescription text-center">Order. Open. Enjoy.</h4>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="hidden-xs col-md-3">
+				<img src="/tree.gif">
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-6 registerOrLoginDiv">
+				<div class="row">
+					<div class="col-xs-6 registrationArrow">
+						<h3 class="appDescription text-center">Didn't Order a diary? Hurry Up!!!</h3>
+						<img src="/arrow_left.png" width="100">
+						<!-- {{>registrationForm}} -->
+					</div>
+					<div class="col-xs-6 loginArrow">
+						<h3 class="appDescription text-center">Already got a diary? Open &amp; Enjoy!!!</h3>
+						<img src="/arrow_right.png" width="100">
+						<!-- {{>registrationForm}} -->
+					</div>					
+				</div>
+			</div>
+			<div class="hidden-xs col-md-3">
+				<img src="/tree.gif">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 col-sm-5 registrationForm">
+				{{>registrationForm}}
+			</div>
+			<div class="col-xs-6 col-sm-5 loginForm">
+				{{>loginForm}}
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="navigationBar">
+	<nav class="navbar navbar-default navigationBar">
+		<div class="container-fluid">
+			<ul class="nav navbar-nav navbar-right">
+	        	<li class="navbar-entries"><a href="#">Order Diary</a></li>
+	        	<li class="navbar-entries"><a href="#">Open Diary</a></li>
+      		</ul>
+      	</div>
+    </nav>
+</template>
+<template name='registrationForm'>
+	<form class="form-horizontal">
+	  <div class="form-group">
+	    <div class="col-sm-offset-2 col-sm-8">
+	      <input type="email" class="form-control registerEmail" id="email" placeholder="Email">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <div class="col-sm-offset-2 col-sm-8">
+	      <input type="password" class="form-control registerPassword" id="password" placeholder="Password">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <div class="col-sm-offset-2 col-sm-8">
+	      <input type="password" class="form-control registerConfirmPassword" id="confirmpassword" placeholder="Confirm Password">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <div class="col-sm-offset-2 col-sm-8">
+	      <button type="button" class="btn btn-default" disabled="true">Order Dairy</button>
+	    </div>
+	  </div>
+	</form>
+</template>
+<template name='loginForm'>
+	<form class="form-horizontal">
+	  <div class="form-group">
+	    <div class="col-sm-offset-2 col-sm-8">
+	      <input type="email" class="form-control" id="email" placeholder="Email">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <div class="col-sm-offset-2 col-sm-8">
+	      <input type="password" class="form-control" id="password" placeholder="Password">
+	    </div>
+	  </div>	  
+	  <div class="form-group">
+	    <div class="col-sm-offset-2 col-sm-8">
+	      <button type="button" class="btn btn-default" disabled="true">Open Dairy</button>
+	    </div>
+	  </div>
+	</form>
+</template>

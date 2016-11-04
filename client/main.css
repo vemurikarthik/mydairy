@@ -1,1 +1,30 @@
 /* CSS declarations go here */
+
+@media screen and (min-width: 1200px) {
+	.registerOrLoginDiv {
+		margin-top: 100px;
+	}
+	.navigationBar {
+		border-radius: 0px !important;
+	}
+	.navbar-entries > a {
+		color: #5DA85F !important;
+	}
+	.appDescription {
+		font-family: "Comic Sans MS", cursive, sans-serif
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.registrationArrow,.loginArrow {
+		margin-top: 50px;
+	}
+}
+
+body {
+	background-color: #5DA85F !important;
+}
+
+.registrationForm,.loginForm {
+	margin-top: 10px;
+}
