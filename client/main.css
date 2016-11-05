@@ -17,7 +17,7 @@
 
 @media screen and (max-width: 768px) {
 	.registrationArrow,.loginArrow {
-		margin-top: 50px;
+		/*margin-top: 50px;*/
 	}
 }
 
