@@ -28,3 +28,7 @@ body {
 .registrationForm,.loginForm {
 	margin-top: 10px;
 }
+
+.landingPageImages {
+	width: 100%;
+}
