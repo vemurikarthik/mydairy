@@ -20,3 +20,7 @@ shell-server@0.2.1            # Server-side component of the `meteor shell` comm
 
 accounts-password
 accounts-base
+juliancwirko:s-alert
+iron:router
+momentjs:moment
+rajit:bootstrap3-datepicker

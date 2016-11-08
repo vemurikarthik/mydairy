@@ -1,5 +1,5 @@
 Meteor.methods({
 	"createNewUser": function(userData) {
-		Accounts.createUser(userData);
+		return Accounts.createUser(userData);
 	}
 });

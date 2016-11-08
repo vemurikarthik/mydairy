@@ -4,12 +4,12 @@
 	.registerOrLoginDiv {
 		margin-top: 100px;
 	}
-	.navigationBar {
+	/*.navigationBar {
 		border-radius: 0px !important;
 	}
 	.navbar-entries > a {
 		color: #5DA85F !important;
-	}
+	}*/
 	.appDescription {
 		font-family: "Comic Sans MS", cursive, sans-serif
 	}
@@ -32,3 +32,16 @@ body {
 .landingPageImages {
 	width: 100%;
 }
+
+.diaryHeader {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
+}
+.diaryContent {
+	opacity: .70;
+}
+.saveDiaryButton {
+	margin-top: 15px;
+}
+/*#selectDiaryDate {
+	margin-top: 100px;
+}*/

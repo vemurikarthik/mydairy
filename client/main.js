@@ -28,17 +28,18 @@ Template.registrationForm.events({
 		var confirmPassword = $("#registrationForm #confirmpassword").val();
 		var userData = {};
 		userData.email = email.toLowerCase();
+		userData.username = email.toLowerCase();
 		userData.password = password;
 		if(!email || !password || !confirmPassword || (password != confirmPassword)) {
-			console.log('Please fill all the fields properly');
-			// $("#registrationForm #password").css('border-color','red');
-			// $("#registrationForm #confirmpassword").css('border-color','red');
+			sAlert.error("Please fill all the fields properly");
 		} else {
 			Meteor.call('createNewUser',userData,function(err,data) {
-				if(data) {
-					console.log('error while creating user');
+				if(err) {
+					sAlert.closeAll();
+					sAlert.info("Created Account Successfully");
 				} else {
-					console.log('new user succesfully created')
+					sAlert.closeAll();
+					sAlert.error("Username or Email already exist");
 				}
 			})
 		}
@@ -53,6 +54,15 @@ Template.loginForm.events({
 		var userData = {};
 		userData.email = email;
 		userData.password = password;
-		Meteor.loginWithPassword(userData.email, userData.password);
+		Meteor.loginWithPassword(userData.email, userData.password, function(err) {
+			if(err) {
+				sAlert.closeAll();
+				sAlert.error("Username or Email doesn't exist");
+			} else {
+				sAlert.closeAll();
+				window.location = 'diaryPage';
+				// sAlert.info("Login Successful");
+			}
+		});
 	}
 });

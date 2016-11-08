@@ -1,0 +1,49 @@
+<template name="diaryPage">
+	<div class="container-fluid">
+		<div class="row col-xs-12 col-sm-8">
+			<div class="col-xs-6">
+				{{> showUserInfo}}
+			</div>
+			<div class="col-xs-6">
+				{{> selectDate}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<hr>
+			</div>		
+			<div class="col-xs-12">
+				<div class="col-xs-3 diaryHeader text-left">
+					{{month}}
+				</div>
+				<div class="col-xs-offset-2 col-xs-3 diaryHeader text-center">
+					{{dayAndDate}}
+				</div>
+				<div class="col-xs-offset-1 col-xs-3 diaryHeader text-right">
+					{{year}}
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<hr>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<textarea class="form-control diaryContent" rows="20"></textarea>
+			</div>
+			<div class="col-xs-12">
+				<button type="button" class="text-right col-xs-2 btn btn-default saveDiaryButton" disabled="true">Save</button>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name='showUserInfo'>
+	<input type="text" class="form-control text-center" disabled="true" value='Welcome {{getUserName}}'>
+</template>
+<template name='selectDate'>
+	<input type="text" class="form-control text-center" id="selectDiaryDate" placeholder="Click to select date" data-date-end-date="0d">
+	<!-- <div class="input-group-addon">
+        <span class="glyphicon glyphicon-th"></span>
+    </div> -->
+</template>
