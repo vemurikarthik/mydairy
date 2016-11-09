@@ -1,18 +1,14 @@
 Template.diaryPage.helpers({
-	month: function() {
-		return moment().format('MMMM');
-	},
-	dayAndDate: function() {
-		return moment().format('dddd, d').toUpperCase();
-	},
-	year: function() {
-		return moment().format('YYYY');
+	date: function() {
+		return moment().format('MMMM Do YYYY , dddd');
 	}
 });
 
 Template.showUserInfo.helpers({
 	getUserName: function() {
-		return Meteor.user().username;
+		if(Meteor.user()) {
+			return Meteor.user().username;
+		}		
 	}
 });
 

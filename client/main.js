@@ -36,10 +36,11 @@ Template.registrationForm.events({
 			Meteor.call('createNewUser',userData,function(err,data) {
 				if(err) {
 					sAlert.closeAll();
-					sAlert.info("Created Account Successfully");
+					sAlert.error("Username or email already exist");
 				} else {
+					$("#registrationForm input").val("");
 					sAlert.closeAll();
-					sAlert.error("Username or Email already exist");
+					sAlert.info("Created account successfully");					
 				}
 			})
 		}
@@ -57,7 +58,7 @@ Template.loginForm.events({
 		Meteor.loginWithPassword(userData.email, userData.password, function(err) {
 			if(err) {
 				sAlert.closeAll();
-				sAlert.error("Username or Email doesn't exist");
+				sAlert.error("Incorrect email or password");
 			} else {
 				sAlert.closeAll();
 				window.location = 'diaryPage';
