@@ -11,7 +11,10 @@
 		color: #5DA85F !important;
 	}*/
 	.appDescription {
-		font-family: "Comic Sans MS", cursive, sans-serif
+		font-family: "Comic Sans MS", cursive, sans-serif !important;
+	}
+	.imageDiv {
+		padding-top: 100px !important;
 	}
 }
 
@@ -37,11 +40,30 @@ body {
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
 }
 .diaryContent {
-	opacity: .70;
+	opacity: .90;
 }
 .saveDiaryButton {
 	margin-top: 15px;
 }
-/*#selectDiaryDate {
-	margin-top: 100px;
-}*/
+.imageDiv {
+	padding: 15px;
+}
+.image1 {
+	border: 1px solid black;
+	height: 150px;
+	-ms-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+.image2 {
+	border: 1px solid black;
+	height: 150px;
+	-ms-transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+.sample_pic {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
