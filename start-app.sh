@@ -1,5 +1,5 @@
 # Start meteor app in development|staging|production mode using this script
-# Make file executable before running it: using chmod +x
+# Make file executable before running it: using sudo chmod +x
 # Run as ./start-app.sh (development|staging|production)
 
 
